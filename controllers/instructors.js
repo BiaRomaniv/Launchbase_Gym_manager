@@ -1,6 +1,6 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { birth, date } = require('./utils')
+const data = require('../data.json')
+const { birth, date } = require('../utils')
 
 exports.index = function(req, res) {
     return res.render("instructors/index", { instructors: data.instructors })
@@ -30,6 +30,11 @@ exports.show = function(req, res) {
 }
 
 // create
+exports.create = function(req,res) {
+    return res.render("instructors/create")
+}
+
+//Post
 exports.post = function(req, res) {
     //cria um array com o objeto
     const keys = Object.keys(req.body)
@@ -80,7 +85,7 @@ exports.edit = function(req, res) {
     const instructor = {
         ...foundInstructor,
         // birth: date(foundInstructor.birth) // 1992-3-27
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
 
 
@@ -88,7 +93,6 @@ exports.edit = function(req, res) {
 }
 
 // put
-
 exports.put = function(req, res) {
     const { id } = req.body
     let index = 0
@@ -116,7 +120,6 @@ exports.put = function(req, res) {
 }
 
 // DELETE
-
 exports.delete = function(req, res) {
     const { id } = req.body
     const filteredInstructor = data.instructors.filter(function(instructor) {

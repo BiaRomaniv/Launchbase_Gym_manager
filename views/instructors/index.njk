@@ -1,25 +1,30 @@
 {% extends "layout.njk" %} {% block content %}
 <div class="card table-container">
+    <a class="add" href="/instructors/create">+</a>
+    <label for="add" > Adicionar Instrutor</label>
+    <label for=""></label>
     <table width="100%">
         <thead>
             <tr>
                 <th>Instrutor</th>
                 <th>Atendimento</th>
-                <th>Ação</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             {% for instructor in instructors %}
             <tr>
                 <td>
-                    <span style="background-image: url({{instructor.avatar_url}});"></span> {{instructor.name}}
+                    <span style="background: no-repeat center/cover url({{instructor.avatar_url}});"></span> {{instructor.name}}
                 </td>
                 <td>{{ instructor.services}}</td>
-                <td><a href="/instructors/{{instructor.id}}">Ver</a></td>
+                <td><a href="/instructors/{{instructor.id}}"> ver Detalhes</a></td>
             </tr>
             {% endfor %}
         </tbody>
+        
     </table>
+    
 </div>
 
 {% endblock %}

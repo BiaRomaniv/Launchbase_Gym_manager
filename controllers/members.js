@@ -1,6 +1,6 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { birth, date } = require('./utils')
+const data = require('../data.json')
+const { birth, date } = require('../utils')
 
 exports.index = function(req, res) {
     return res.render("members/index", { members: data.members })
@@ -20,7 +20,7 @@ exports.show = function(req, res) {
 
     const member = {
         ...foundMember,
-        birth: birth(foundMember.birth),
+        birth: date(foundMember.birth).birthDay,
         // string e transformar em array quadno encontrar uma virgula
 
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundMember.created_at),
@@ -46,11 +46,15 @@ exports.post = function(req, res) {
 
 
     // desestruturar o req body
-    let { avatar_url, birth, name, services, gender } = req.body
+    let { avatar_url, birth, name, gender, email, blood, weight, height} = req.body
 
     birth = Date.parse(birth)
     const created_at = Date.now()
-    const id = Number(data.members.length + 1)
+    let id = 1
+    const lastMember = data.members[data.members.length - 1]
+    if (lastMember) {
+        id = lastMember.id + 1
+    }
 
     data.members.push({
             id,
@@ -58,7 +62,10 @@ exports.post = function(req, res) {
             name,
             birth,
             gender,
-            services,
+            email,
+            blood,
+            weight,
+            height,
             created_at
         })
         //adiciona o req.body no array members
@@ -85,7 +92,7 @@ exports.edit = function(req, res) {
     const member = {
         ...foundMember,
         // birth: date(foundMember.birth) // 1992-3-27
-        birth: date(foundMember.birth)
+        birth: date(foundMember.birth).iso
     }
 
 
@@ -93,7 +100,6 @@ exports.edit = function(req, res) {
 }
 
 // put
-
 exports.put = function(req, res) {
     const { id } = req.body
     let index = 0
@@ -121,7 +127,6 @@ exports.put = function(req, res) {
 }
 
 // DELETE
-
 exports.delete = function(req, res) {
     const { id } = req.body
     const filteredMember = data.members.filter(function(member) {

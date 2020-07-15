@@ -25,7 +25,10 @@
             background: var(--color-back);
             text-align: center;
             box-sizing: border-box;
+            display: flex;
         }
+
+        
         
         .links {
             text-align: center;
@@ -70,10 +73,28 @@
             transition: width 500ms cubic-bezier(0.57, 0.1, 0.29, 1.04);
             /*ver MDN*/
         }
+
+         /* FOOTER */
+        .links.fter a {
+            text-align: center;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--color-text);
+        }
+
+        .dev {
+            text-align: center;
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 24px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
         /* CARD */
-        
+       
         .card {
             background-color: white;
+            border-radius: 8px;
             width: 800px;
             min-height: 400px;
             margin: 45px auto;
@@ -87,6 +108,11 @@
             /* animation-timing-function: ease-out;*/
         }
         
+        .card .avatar {
+            border-radius: 6px 0 0 6px;
+        }
+
+        
         @keyframes up {
             0% {
                 opacity: 0;
@@ -97,19 +123,16 @@
             }
         }
         
-        .avatar {
-            background-position: center;
-        }
         /* DETAILS */
         
         .details {
             color: var(--color-back);
-            padding: 32px;
+            padding: 28px;
         }
         
         .details .item {
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 16px 0;
+            padding: 10px 0 5px 0;
         }
         /*retirar do ultimo elemento*/
         
@@ -152,7 +175,7 @@
         }
         /* FORM */
         
-        form input {
+        form input, select {
             width: 100%;
             outline: none;
             color: #555;
@@ -192,10 +215,16 @@
         
         #form-delete button[type="submit"] {
             margin-top: 8px;
-            background-color: red;
+            background-color: rgb(212, 41, 41);
         }
         /* INDEX INSTRUCTORS */
         
+        .card label{
+            color: #777777;
+            text-transform: uppercase;
+            margin-left: 10px;
+            font-size: 12px;
+        }
         .table-container {
             display: block;
             padding: 40px;
@@ -205,6 +234,7 @@
         
         .table-container table {
             border-spacing: 0;
+           
         }
         
         .table-container thead tr th {
@@ -238,25 +268,51 @@
         tbody tr td:first-child span {
             width: 60px;
             height: 60px;
-            margin-right: 10px;
-            background-position: center;
-            background-size: cover;
             border-radius: 50px;
-            box-shadow: 3px 1px 6px -4px black;
+            box-shadow: 2px 1px 6px -4px black;
             border: 2px solid var(--color-green)
         }
         
-        tbody tr td:last-child a {
+        tbody tr td:last-child a, .table-container > a {
             background-color: var(--color-green);
             padding: 8px 16px;
             text-decoration: none;
             text-transform: uppercase;
             color: var(--color-text);
             font-size: 12px;
-            border-radius: 4px;
+            border-radius: 8px;
+            box-shadow: 3px 1px 6px -4px black;
         }
         
+        .table-container > a {
+            display: inline-block;
+            margin-bottom: 15px;
+            
+            width: 5px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 100%;
+         
+        }
+
         .table-container thead tr th:last-child,
         td:last-child {
             text-align: center;
+        }
+
+       
+        /* PAGINA INICIAL */
+
+        .body-acess {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .body-acess img {
+            border-radius: 0 100px 0 100px;
         }

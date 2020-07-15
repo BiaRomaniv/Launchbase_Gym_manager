@@ -1,10 +1,10 @@
 {% extends "layout.njk" %} {% block content %}
-<form class="card" method="POST" action="/instructors">
-    <section class="avatar" style="background:url(https://source.unsplash.com/collection/10634190/400x400) no-repeat center center / cover";></section>
+<form class="card" method="POST" action="/members">
+    <section class="avatar" style="background: no-repeat center/cover url(https://images.unsplash.com/photo-1518310383802-640c2de311b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)";></section>
 
     <section class="details">
-        <h3>CADASTRO DE NOVO INSTRUTOR</h3>
-           {% include 'instructors/fields.njk' %}
+        <h3>CADASTRO DE NOVO MEMBRO</h3>
+           {% include 'members/fields.njk' %}
         
         
     </section>

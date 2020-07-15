@@ -1,25 +1,33 @@
 {% extends "layout.njk" %} {% block content %}
-<div class="card table-container">
-    <table width="100%">
-        <thead>
-            <tr>
-                <th>Instrutor</th>
-                <th>Atendimento</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for instructor in instructors %}
-            <tr>
-                <td>
-                    <span style="background-image: url({{instructor.avatar_url}});"></span> {{instructor.name}}
-                </td>
-                <td>{{ instructor.services}}</td>
-                <td><a href="/instructors/{{instructor.id}}">Ver</a></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+
+    <div class="card table-container">
+        <a class="add" href="/members/create">+</a>
+        <label for="add" > Adicionar Membro</label>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>            
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in members %}
+                <tr>
+                    <td>
+                        <span style="background: no-repeat center/cover url({{member.avatar_url}});"></span> {{member.name}}
+                    </td>
+                    <td>{{ member.email}}</td>
+                    <td><a href="/members/{{member.id}}">Ver Detalhes</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
 
 {% endblock %}

@@ -1,31 +1,66 @@
 {
-    "members": [],
-    "instructors": [{
-            "id": 1,
-            "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-            "name": "Bianca",
-            "birth": 570844800000,
-            "gender": "F",
-            "services": "Crossfit, Musculação",
-            "created_at": 1594649432726
-        },
-        {
-            "id": 2,
-            "avatar_url": "https://images.unsplash.com/photo-1591741543032-bf439b4fd46c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-            "name": "Rodrigo",
-            "birth": 701654400000,
-            "gender": "M",
-            "services": "Musculação",
-            "created_at": 1594649472820
-        },
-        {
-            "id": 3,
-            "avatar_url": "https://images.unsplash.com/photo-1513352098199-8ccf457b35a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
-            "name": "Jão",
-            "birth": 665971200000,
-            "gender": "M",
-            "services": "Crossfit, Musculação",
-            "created_at": 1594649518772
-        }
-    ]
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "name": "Cris",
+      "birth": -1511568000000,
+      "gender": "M",
+      "email": "cris@gmail.com",
+      "blood": "AB+",
+      "weight": "90",
+      "height": "185",
+      "created_at": 1594682992995
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1584380931214-dbb5b72e7fd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80",
+      "name": "Julia",
+      "birth": -89337600000,
+      "gender": "F",
+      "email": "julia@gmail.com",
+      "blood": "O-",
+      "weight": "56",
+      "height": "168",
+      "created_at": 1594683873963
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Bianca",
+      "birth": 573350400000,
+      "gender": "F",
+      "services": "Crossfit",
+      "created_at": 1594649432726
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1591741543032-bf439b4fd46c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Rodrigo",
+      "birth": 712713600000,
+      "gender": "M",
+      "services": "Musculação",
+      "created_at": 1594649472820
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1513352098199-8ccf457b35a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+      "name": "Jão",
+      "birth": 665971200000,
+      "gender": "M",
+      "services": "Crossfit, Musculação",
+      "created_at": 1594649518772
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "name": "Cris",
+      "birth": -31449600000,
+      "gender": "M",
+      "services": "Musculação, Ginástica, Body Pump",
+      "created_at": 1594818634029
+    }
+  ]
 }

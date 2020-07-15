@@ -18,6 +18,10 @@ module.exports = {
         const month = `0${date.getUTCMonth() + 1}`.slice(-2) //pq o mes vem de 0 a 11
         const day = `0${date.getUTCDate()}`.slice(-2)
 
-        return `${year}-${month}-${day}`
+        return {
+
+            iso: `${year}-${month}-${day}`,
+            birthDay: `${day}/${month}`
+        }
     }
 }
