@@ -7,7 +7,7 @@
   
  
 ## Sobre o desenvolvimento :sweat_drops:
-  O desenvolvimento foi realizado acompanhando os passos do instrutor Mayk Brito com algumas mudanças simples de estilização.
+  O desenvolvimento foi realizado acompanhando os passos do instrutor Mayk Brito com algumas diferenças de estilização.
     
 ## Sobre o aprendizado :bowtie:
   Em resumo alguns aprendizados durante este desenvolvimento:
